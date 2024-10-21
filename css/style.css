@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #0f1f5a 0%, rgb(0, 221, 255) 100%);
+    
+}
+
+.circular-menu {
+    position: relative;
+    width: 550px;
+    height: 550px;
+}
+
+.circular-menu_item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border:#000000 solid 4px;
+    border-radius: 50%;
+    text-decoration: none;
+    color : rgb(255, 0, 0);
+    background-color: none;
+    transition: 0.7s ease;
+    outline: none;
+}
+
+.circular-menu_item:hover{
+    transition: 0.2s ease;
+    padding:25px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.323);
+} 
+
+.circular-menu_button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border:4mm ridge rgba(0, 0, 0, 0.6);
+    background: linear-gradient(120deg, #0086df 0%, rgb(0, 221, 255) 100%);
+    outline: none;
+    
+}
+
+
+
+.circular-menu_lines,
+.circular-menu_lines::before,
+.circular-menu_lines::after {
+    position: absolute;
+    width: 60px;
+    height: 6px;
+    background-color: #000000;
+    transition: 0.7s ease;
+
+}
+
+.circular-menu_lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+.circular-menu_lines::before {
+    content: '';
+}
+
+.circular-menu_lines::after {
+    content: '';
+    transform: rotate(90deg);
+}
+
+.circular-menu_button_active .circular-menu_lines::before {
+    transform: rotate(45deg);
+}
+
+.circular-menu_button_active .circular-menu_lines::after {
+    transform: rotate(-45deg);
+}
+
+.under {
+    position: relative;
+    width: 550px;
+    height: 100px;
+    margin-top:600px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back {
+    position: fixed;
+    display: flex;
+    right: 93%;
+    bottom: 95%;
+    opacity: 0;
+    cursor: pointer;
+    height: 30px;
+
+}
+
+.hometxt {
+    opacity: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.under p {
+    border: 3mm ridge rgba(0, 0, 0, 0.471); 
+}
+
+
